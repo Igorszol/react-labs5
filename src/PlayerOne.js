@@ -5,20 +5,30 @@ class PlayerOne extends React.Component {
     constructor(props){
         super(props);
     }
+
+    changetext(button)
+    {
+        if(button)
+        return "This user is playing now";
+        else
+        return "Play";
+    }
+
     render() {
         return (
             <div style= {{border:"2px solid black"}}>
                 
             <h1>I'm PlayerOne</h1>
+
             <p>
-                <label>Name: {this.props.name}</label>
+            <label>Name: {this.props.name}</label>
             </p>
 
             <p>
-            <label>Played number of times:</label>
-
+            <label>Played number of times: {this.props.number}</label>
             </p>
-            <button>Play</button>
+
+            <button disabled={this.props.button} onClick={this.props.click} >{this.changetext(this.props.button)}</button>
         </div>
         );
     }
