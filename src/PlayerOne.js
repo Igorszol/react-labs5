@@ -28,7 +28,8 @@ class PlayerOne extends React.Component {
             <label>Played number of times: {this.props.number}</label>
             </p>
 
-            <button disabled={this.props.button} onClick={this.props.click} >{this.changetext(this.props.button)}</button>
+            <button style={{position:"relative", left:"10px", bottom:"10px"}} disabled={this.props.button} onClick={this.props.click} >{this.changetext(this.props.button)}</button>
+       
         </div>
         );
     }
