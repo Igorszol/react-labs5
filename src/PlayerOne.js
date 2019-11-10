@@ -16,7 +16,7 @@ class PlayerOne extends React.Component {
 
     render() {
         return (
-            <div style= {{border:"2px solid black"}}>
+            <div style= {{border:"2px solid black", position: "relative", padding:"10px"}}>
                 
             <h1>I'm PlayerOne</h1>
 
@@ -26,9 +26,8 @@ class PlayerOne extends React.Component {
 
             <p>
             <label>Played number of times: {this.props.number}</label>
+            <button style={{position:"absolute", right:"20px", bottom:"20px"}} disabled={this.props.button} onClick={this.props.click} >{this.changetext(this.props.button)}</button>
             </p>
-
-            <button style={{position:"relative", left:"10px", bottom:"10px"}} disabled={this.props.button} onClick={this.props.click} >{this.changetext(this.props.button)}</button>
        
         </div>
         );
